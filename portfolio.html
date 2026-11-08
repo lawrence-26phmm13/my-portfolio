@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+  <header class="topbar">
+    <a class="brand dark-brand" href="#"><span class="brand-mark">✦</span> MyPortfolio</a>
+    <nav><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a></nav>
+    <div class="top-actions"><span class="welcome-user" id="welcomeUser">Hello!</span><button class="btn btn-outline" id="logoutButton">Logout ↗</button></div>
+  </header>
+
+  <main class="dashboard-wrap">
+    <section class="hero-card">
+      <div class="hero-text">
+        <p class="eyebrow">HELLO, WORLD! ✨</p>
+        <h1 id="heroName">Your name goes here.</h1>
+        <p id="heroHeadline">Student | Learner | Creator</p>
+        <a class="btn btn-light" href="#projects">Explore my work <span>→</span></a>
+      </div>
+      <div class="hero-orbit"><div class="orbit-circle">✦</div><span class="orbit-tag tag-one">CREATE</span><span class="orbit-tag tag-two">LEARN</span><span class="orbit-tag tag-three">GROW</span></div>
+    </section>
+
+    <section class="section-grid" id="about">
+      <div class="section-intro">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>More than a<br>student ID.</h2>
+        <p>Every skill starts with curiosity. Here's a little introduction to my journey.</p>
+      </div>
+      <form class="content-card edit-form" id="profileForm">
+        <div class="card-heading"><div><p class="eyebrow">MY INTRODUCTION</p><h3>About me</h3></div><span class="card-icon">✎</span></div>
+        <label for="headline">Headline</label><input id="headline" maxlength="120" placeholder="Student | Designer | Developer">
+        <label for="aboutText">About me</label><textarea id="aboutText" rows="4" maxlength="1000" placeholder="Tell visitors a little about yourself..."></textarea>
+        <div class="two-fields"><div><label for="location">Location</label><input id="location" placeholder="Your city"></div><div><label for="phone">Contact number</label><input id="phone" placeholder="Optional"></div></div>
+        <button class="btn btn-primary" type="submit">Save profile <span>✓</span></button>
+        <p class="message" id="profileMessage" role="status"></p>
+      </form>
+    </section>
+
+    <section class="content-card section-card" id="education">
+      <div class="card-heading"><div><p class="eyebrow">MY LEARNING JOURNEY</p><h2>Education</h2></div><span class="card-icon purple">▤</span></div>
+      <form class="inline-form" id="educationForm">
+        <input id="course" placeholder="Course / Class" required>
+        <input id="institution" placeholder="School / College" required>
+        <input id="year" placeholder="Year">
+        <button class="btn btn-primary" type="submit">+ Add</button>
+      </form>
+      <div class="item-list" id="educationList"></div>
+    </section>
+
+    <section class="content-card section-card" id="skills">
+      <div class="card-heading"><div><p class="eyebrow">THINGS I'M GOOD AT</p><h2>My skills</h2></div><span class="card-icon pink">✧</span></div>
+      <form class="inline-form skill-form" id="skillForm"><input id="skillInput" placeholder="Add a skill (e.g. HTML)" required><button class="btn btn-primary" type="submit">+ Add skill</button></form>
+      <div class="skill-list" id="skillList"></div>
+    </section>
+
+    <section class="content-card section-card" id="projects">
+      <div class="card-heading"><div><p class="eyebrow">MADE WITH CURIOSITY</p><h2>My projects</h2></div><span class="card-icon orange">✦</span></div>
+      <form class="project-form" id="projectForm">
+        <input id="projectTitle" placeholder="Project title" required>
+        <textarea id="projectDescription" rows="2" placeholder="What is this project about?"></textarea>
+        <input id="projectLink" type="url" placeholder="Project link (optional, include https://)">
+        <button class="btn btn-primary" type="submit">+ Add project</button>
+      </form>
+      <div class="project-grid" id="projectList"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand dark-brand" href="#"><span class="brand-mark">✦</span> MyPortfolio</a><p>Designed with curiosity. Built with code. © <span id="yearNow"></span></p><a href="#top">Back to top ↑</a></footer>
+  <script src="portfolio.js"></script>
+</body>
+</html>
